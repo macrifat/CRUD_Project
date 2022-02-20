@@ -1,0 +1,21 @@
+{% extends 'crud_app/base.html' %}
+
+{% block body %}
+
+<h1> Student List </h1>
+<ul>
+{% if student_list %}
+
+{% for student in student_list %}
+<li><a href="{% url 'crud_app:student_info' student_id=student.id %}"> {{student.first_name}} {{student.last_name}} </a></li>
+
+{% endfor %}
+
+{% else %}
+
+<h3> No student</h3>
+
+{% endif %}
+</ul>
+
+{% endblock %}

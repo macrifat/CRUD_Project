@@ -1,0 +1,15 @@
+{% extends 'crud_app/base.html' %}
+
+{% block body %}
+
+<h> student Update</h>
+
+
+<form action="" method="POST">
+    {{student_form.as_p}}
+    {% csrf_token %}
+
+    <input type="submit" value="update">
+
+</form>
+{% endblock %}

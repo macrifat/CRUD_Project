@@ -1,0 +1,15 @@
+{% extends 'crud_app/base.html' %}
+
+{% block body %}
+
+<h1> Student Info </h1>
+<h3> Student ID: {{student_info.id}}</h3>
+<h3> Student Name: {{student_info.first_name}}{{student_info.last_name}}</h3>
+<h3> email: {{student_info.email}}</h3>
+<h3> Phone: {{student_info.phone}}</h3>
+
+<a href="{% url 'crud_app:student_update' student_id=student_info.id %}" class="btn btn-primary" >Update</a>
+
+<a href="{% url 'crud_app:student_delete' student_id=student_info.id %}" class="btn btn-primary" >Delete</a>
+
+{% endblock %}
